@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- Fix /pricing route -->
+  <!-- Make /pricing work -->
   <script>
     if (window.location.pathname === "/pricing") {
       window.location.replace("/#pricing");
@@ -101,20 +101,19 @@
   <h2>Get Started</h2>
   <p>Tell us about your site. We’ll reply within 24 hours.</p>
 
-  <form
-    name="qa-contact"
-    method="POST"
-    data-netlify="true"
-    action="/thank-you.html"
-  >
+  <!-- ✅ NETLIFY FORM (CORRECT) -->
+  <form name="qa-contact" method="POST" data-netlify="true">
     <input type="hidden" name="form-name" value="qa-contact" />
+    <input type="hidden" name="redirect" value="/thank-you.html" />
 
     <input type="text" name="name" placeholder="Your name" required />
     <input type="email" name="email" placeholder="Your email" required />
     <input type="url" name="website" placeholder="Website or app URL" required />
     <textarea name="message" placeholder="What do you want tested?" required></textarea>
 
-    <button type="submit" class="btn primary">Request QA Testing</button>
+    <button type="submit" class="btn primary">
+      Request QA Testing
+    </button>
   </form>
 </section>
 
