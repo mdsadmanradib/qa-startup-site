@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>QA Testing for Startups</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <!-- HERO -->
@@ -85,13 +87,10 @@
     <h2>Request QA Testing</h2>
 
     <!-- NETLIFY FORM -->
-    <form
-      name="qa-contact"
-      method="POST"
-      data-netlify="true"
-    >
+    <form name="qa-contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field">
+      <!-- REQUIRED -->
       <input type="hidden" name="form-name" value="qa-contact" />
-      <input type="hidden" name="redirect" value="/thank-you.html" />
+      <input type="hidden" name="bot-field" />
 
       <input type="text" name="name" placeholder="Your name" required />
       <input type="email" name="email" placeholder="Your email" required />
@@ -102,7 +101,9 @@
         Request QA Testing
       </button>
     </form>
+
   </section>
 
 </body>
+
 </html>
