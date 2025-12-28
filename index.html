@@ -3,25 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <!-- Make /pricing work -->
-  <script>
-    if (window.location.pathname === "/pricing") {
-      window.location.replace("/#pricing");
-    }
-  </script>
-
   <title>Startup QA Testing</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
+<!-- HERO -->
 <header>
   <h1>Catch Bugs Before Your Users Do</h1>
   <p>On-demand QA testing for startups that ship fast.</p>
-  <a href="#pricing" class="btn primary">Get Your Site Tested</a>
+
+  <!-- ✅ CORRECT: anchor link -->
+  <a href="#contact" class="btn primary">Request QA Testing</a>
 </header>
 
+<!-- PROBLEM -->
 <section>
   <h2>The Problem</h2>
   <p>
@@ -31,6 +27,7 @@
   </p>
 </section>
 
+<!-- SOLUTION -->
 <section class="alt">
   <h2>The Solution</h2>
   <ul>
@@ -41,6 +38,7 @@
   </ul>
 </section>
 
+<!-- HOW IT WORKS -->
 <section>
   <h2>How It Works</h2>
   <ol>
@@ -50,12 +48,14 @@
   </ol>
 </section>
 
+<!-- SAMPLE -->
 <section class="alt">
   <h2>Sample QA Report</h2>
   <p>See exactly what you’ll receive.</p>
   <a href="sample-report.pdf" class="btn" download>Download Sample Report</a>
 </section>
 
+<!-- PRICING -->
 <section id="pricing">
   <h2>Pricing</h2>
 
@@ -69,6 +69,7 @@
         <li>Core flow testing</li>
         <li>Bug list + screenshots</li>
       </ul>
+      <!-- ✅ CORRECT -->
       <a href="#contact" class="btn">Get Started</a>
     </div>
 
@@ -80,6 +81,7 @@
         <li>Desktop + mobile</li>
         <li>Edge cases & UX feedback</li>
       </ul>
+      <!-- ✅ CORRECT -->
       <a href="#contact" class="btn primary">Most Popular</a>
     </div>
 
@@ -91,12 +93,14 @@
         <li>Regression testing</li>
         <li>Launch checklist</li>
       </ul>
+      <!-- ✅ CORRECT -->
       <a href="#contact" class="btn">Launch Confidently</a>
     </div>
 
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="alt" id="contact">
   <h2>Get Started</h2>
   <p>Tell us about your site. We’ll reply within 24 hours.</p>
