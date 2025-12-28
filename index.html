@@ -2,16 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- 🔥 FIX: make /pricing work -->
+  <script>
+    if (window.location.pathname === "/pricing") {
+      window.location.replace("/#pricing");
+    }
+  </script>
+
   <title>Startup QA Testing</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
 
 <header>
   <h1>Catch Bugs Before Your Users Do</h1>
   <p>On-demand QA testing for startups that ship fast.</p>
-  <a href="#pricing" class="btn">Get Your Site Tested</a>
+  <a href="#pricing" class="btn primary">Get Your Site Tested</a>
 </header>
 
 <section>
@@ -23,7 +31,7 @@
   </p>
 </section>
 
-<section>
+<section class="alt">
   <h2>The Solution</h2>
   <ul>
     <li>Manual & exploratory testing</li>
@@ -36,6 +44,78 @@
 <section>
   <h2>How It Works</h2>
   <ol>
-    <li>You send us your website or app</li>
+    <li>You submit your site or app</li>
     <li>We test it like real users</li>
-    <li>You
+    <li>You receive a clear, actionable report</li>
+  </ol>
+</section>
+
+<section class="alt">
+  <h2>Sample QA Report</h2>
+  <p>See exactly what you’ll receive.</p>
+  <a href="sample-report.pdf" class="btn" download>Download Sample Report</a>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+
+  <div class="pricing">
+
+    <div class="card">
+      <h3>Starter QA</h3>
+      <p class="price">$99</p>
+      <ul>
+        <li>Up to 5 pages</li>
+        <li>Core flow testing</li>
+        <li>Bug list + screenshots</li>
+      </ul>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+
+    <div class="card highlight">
+      <h3>Full QA Audit</h3>
+      <p class="price">$299</p>
+      <ul>
+        <li>Full website or SaaS</li>
+        <li>Desktop + mobile</li>
+        <li>Edge cases & UX feedback</li>
+      </ul>
+      <a href="#contact" class="btn primary">Most Popular</a>
+    </div>
+
+    <div class="card">
+      <h3>Pre-Launch Intensive</h3>
+      <p class="price">$499</p>
+      <ul>
+        <li>Deep exploratory testing</li>
+        <li>Regression testing</li>
+        <li>Launch checklist</li>
+      </ul>
+      <a href="#contact" class="btn">Launch Confidently</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="alt" id="contact">
+  <h2>Get Started</h2>
+  <p>Tell us about your site. We’ll reply within 24 hours.</p>
+
+  <form name="qa-contact" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="qa-contact" />
+
+    <input type="text" name="name" placeholder="Your name" required />
+    <input type="email" name="email" placeholder="Your email" required />
+    <input type="url" name="website" placeholder="Website or app URL" required />
+    <textarea name="message" placeholder="What do you want tested?" required></textarea>
+
+    <button type="submit" class="btn primary">Request QA Testing</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2025 Startup QA Testing</p>
+</footer>
+
+</body>
+</html>

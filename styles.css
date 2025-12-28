@@ -1,60 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#pricing {
+  scroll-margin-top: 80px;
+}
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   background: #f7f9fc;
-  color: #222;
+  color: #111;
   line-height: 1.6;
 }
 
 header {
-  background: #0f172a;
+  background: linear-gradient(135deg, #0f172a, #020617);
   color: white;
-  padding: 80px 20px;
+  padding: 90px 20px;
   text-align: center;
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+header p {
+  opacity: 0.9;
 }
 
 section {
-  padding: 50px 20px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
+  padding: 70px 20px;
+}
+
+section.alt {
+  background: #ffffff;
 }
 
 h2 {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 ul, ol {
   padding-left: 20px;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  background: #2563eb;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
 }
 
 .card {
   background: white;
-  padding: 25px;
-  margin: 20px 0;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
 }
 
-.highlight {
+.card.highlight {
   border: 2px solid #2563eb;
+  transform: scale(1.02);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background: #e5e7eb;
+  color: #111;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: white;
+}
+
+form {
+  max-width: 500px;
+  margin: auto;
+  display: grid;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 footer {
+  background: #020617;
+  color: #cbd5f5;
   text-align: center;
-  padding: 20px;
-  background: #e5e7eb;
+  padding: 25px;
+  font-size: 0.9rem;
 }
